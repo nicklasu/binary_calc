@@ -1,25 +1,22 @@
 import { useState } from "react";
-<<<<<<< HEAD
-
-=======
-import getNumber from "./Functions/GetNumber";
->>>>>>> 65621ca75691313548a559d1aa815378954078b6
+import "./App.css";
+import Input from "./Components/Input/Input";
+import Result from "./Components/Result/Result";
 function App() {
-  const [num1, setNum1] = useState();
-  const [num2, setNum2] = useState();
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
 
-  console.log(Number(num1) + Number(num2));
+  // Buttonit josta toinen vaihtaisi allaolevan muuttujan arvoksi (+)
+  // ja toinen vaihtaisi (-)
+  // Löytyy Reactin sivulta kun googlettaa useState
+  const [calc, setCalc] = useState("-");
 
   return (
-    <>
-<<<<<<< HEAD
-      <input onChange={(e) => setNum1(e.target.value)}></input>
-      <input onChange={(e) => setNum2(e.target.value)}></input>
-=======
-      <input onChange={(e) => setNum1(getNumber(e.target.value))}></input>
-      <input onChange={(e) => setNum2(getNumber(e.target.value))}></input>
->>>>>>> 65621ca75691313548a559d1aa815378954078b6
-    </>
+    <main className="main-content">
+      <Input setNumber={setNum1} />
+      <Input setNumber={setNum2} />
+      <Result num1={num1} num2={num2} calc={calc} />
+    </main>
   );
 }
 

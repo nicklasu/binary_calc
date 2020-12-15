@@ -1,9 +1,16 @@
 import getNumber from "../../Functions/GetNumber";
-import calculateTotal from "../../Functions/Calculate";
-function Input(value) {
-  console.log(calculateTotal(5, 4, "+"));
+
+// For user input
+// Only binary numbers (0 and 1) as valid values
+function Input({ setNumber }) {
   return (
-    <input onChange={(e) => console.log(getNumber(e.target.value))}></input>
+    <input
+      inputMode="numeric"
+      pattern="[0-1]*"
+      placeholder={0}
+      onChange={(e) => setNumber(getNumber(e.currentTarget.value))}
+      style={{ textAlign: "center" }}
+    ></input>
   );
 }
 
