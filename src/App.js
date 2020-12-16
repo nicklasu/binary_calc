@@ -26,8 +26,8 @@ function App() {
     <main className="main-content">
       <Input setNumber={setNum1} />
       <Input setNumber={setNum2} /> <br />
-      <button onClick={() => alert("miinus")}>-</button>
-      <button onClick={() => alert("plus")}>+</button>
+      <button onClick={() => setCalc(calc === "-")}>-</button>
+      <button onClick={() => setCalc(calc === "+")}>+</button>
       <Result num1={num1} num2={num2} calc={calc} />
     </main>
   );
