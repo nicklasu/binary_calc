@@ -20,14 +20,15 @@ function App() {
   // Ehtisin kattoa sitä koodia ja kommentoida ennen ku liitetään se projektiin
   // En ole varma itsekään miten se tarkalleen tehdään mutta se on oikea tyyli tehä näitä :D
 
-  const [calc, setCalc] = useState();
+  //Jätin oletuksena tän + stateen koska silloin ruudulle ilmestyy interaktiivisesti lukuja, muuten vasta kun painaa nappeja.
+  const [calc, setCalc] = useState("+");
 
   return (
     <main className="main-content">
       <Input setNumber={setNum1} />
       <Input setNumber={setNum2} /> <br />
-      <button onClick={() => alert("miinus")}>-</button>
-      <button onClick={() => alert("plus")}>+</button>
+      <button onClick={() => setCalc("-")}>-</button>
+      <button onClick={() => setCalc("+")}>+</button>
       <Result num1={num1} num2={num2} calc={calc} />
     </main>
   );
