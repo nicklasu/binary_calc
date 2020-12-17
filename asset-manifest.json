@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/binary_calc/static/css/main.7a4fdfc6.chunk.css",
+    "main.js": "/binary_calc/static/js/main.8b18a527.chunk.js",
+    "main.js.map": "/binary_calc/static/js/main.8b18a527.chunk.js.map",
+    "runtime-main.js": "/binary_calc/static/js/runtime-main.63ac6399.js",
+    "runtime-main.js.map": "/binary_calc/static/js/runtime-main.63ac6399.js.map",
+    "static/js/2.92288f3b.chunk.js": "/binary_calc/static/js/2.92288f3b.chunk.js",
+    "static/js/2.92288f3b.chunk.js.map": "/binary_calc/static/js/2.92288f3b.chunk.js.map",
+    "static/js/3.897bd99e.chunk.js": "/binary_calc/static/js/3.897bd99e.chunk.js",
+    "static/js/3.897bd99e.chunk.js.map": "/binary_calc/static/js/3.897bd99e.chunk.js.map",
+    "index.html": "/binary_calc/index.html",
+    "static/css/main.7a4fdfc6.chunk.css.map": "/binary_calc/static/css/main.7a4fdfc6.chunk.css.map",
+    "static/js/2.92288f3b.chunk.js.LICENSE.txt": "/binary_calc/static/js/2.92288f3b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63ac6399.js",
+    "static/js/2.92288f3b.chunk.js",
+    "static/css/main.7a4fdfc6.chunk.css",
+    "static/js/main.8b18a527.chunk.js"
+  ]
+}
