@@ -1,14 +1,12 @@
-import getNumber from "../../Functions/GetNumber";
-
 // For user input
-// Only binary numbers (0 and 1) as valid values
+// Take only binary numbers (0 and 1) as valid values
 function Input({ setNumber }) {
   return (
     <input
       inputMode="numeric"
       pattern="[0-1]*"
       placeholder={0}
-      onChange={(e) => setNumber(getNumber(e.currentTarget.value))}
+      onChange={(e) => setNumber(e.currentTarget.value)}
       style={{ textAlign: "center" }}
     ></input>
   );
