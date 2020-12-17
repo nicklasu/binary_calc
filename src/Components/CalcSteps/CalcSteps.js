@@ -28,7 +28,8 @@ function CalcSteps({ num1, num2, calc }) {
   }
   const overflow =
     total.toString(2).length > binary1.length ||
-    total.toString(2).length > binary2.length;
+    total.toString(2).length > binary2.length ||
+    sum < [0, 0, 0, 0];
 
   return (
     <section className="section-calc">
