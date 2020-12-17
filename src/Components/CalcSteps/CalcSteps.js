@@ -15,7 +15,17 @@ function CalcSteps({ num1, num2, calc }) {
     binaryToArray(num1).length
   );
   // Total +/- in binary
-  let total = calculate(getNumber(num1), getNumber(num2), calc);
+
+  let total = calculate(getNumber(num1), getNumber(num2), calc).toString(2);
+
+  //Check if the user has chosen subtraction, if they have, perform these steps:
+  if (calc === "-") {
+    //Make total into a list and compare it to num1 to get the right length
+    var sum = addMissingZeros(binaryToArray(total), binaryToArray(num1).length);
+    //If user has chosen other option than subtraction then just take total and make it to sum so it can be represented in the html.
+  } else {
+    sum = total;
+  }
   const overflow =
     total.toString(2).length > binary1.length ||
     total.toString(2).length > binary2.length;
@@ -30,7 +40,7 @@ function CalcSteps({ num1, num2, calc }) {
         overflow ? (
           <p>overflow!</p>
         ) : (
-          <p style={{ textAlign: "right" }}>{total.toString(2)}</p>
+          <p style={{ textAlign: "right" }}>{sum}</p>
         )
       }
     </section>
