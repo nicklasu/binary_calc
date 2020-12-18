@@ -6,6 +6,9 @@ import calculate from "../../Functions/Calculate";
 
 // Tätä pitää muuttaa vielä jotenkin selvemmäksi
 function CalcSteps({ num1, num2, calc }) {
+  // Bit size
+  let zerosNeeded = Math.max(binaryToArray(num1), binaryToArray(num2));
+
   // Total +/- as integer and binary
   let totalInt = calculate(getNumber(num1), getNumber(num2), calc);
   let totalBin = totalInt.toString(2);
@@ -16,22 +19,13 @@ function CalcSteps({ num1, num2, calc }) {
 
   // Set binaries as arrays
   // Add zeros if needed
-  let binary1 = addMissingZeros(
-    binaryToArray(num1),
-    binaryToArray(num2).length
-  );
-  let binary2 = addMissingZeros(
-    binaryToArray(num2),
-    binaryToArray(num1).length
-  );
+  let binary1 = addMissingZeros(binaryToArray(num1), zerosNeeded);
+  let binary2 = addMissingZeros(binaryToArray(num2), zerosNeeded);
 
   // Total binary as array
   // Add zeros if needed
   totalBin = binaryToArray(totalBin);
-  totalBin = addMissingZeros(
-    totalBin,
-    Math.max(binary1.length, binary2.length)
-  );
+  totalBin = addMissingZeros(totalBin, zerosNeeded);
 
   // Check if result is overflowing
   let overflow =
