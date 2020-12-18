@@ -4,9 +4,10 @@ import calculate from "../../Functions/Calculate";
 import addZeros from "./Functions/addZeros";
 import checkOverflow from "./Functions/UnsignedOverflow";
 
-// Display unsigned char result
+// Display unsigned char calculation
 function Unsigned({ num1, num2, calc }) {
   // Set max bit size
+  // Add zeros if needed
   // Display result as binary
   const bitSize = Math.max(num1.length, num2.length);
   num1 = addZeros(num1, bitSize);
@@ -17,17 +18,15 @@ function Unsigned({ num1, num2, calc }) {
     calc
   ).toString(2);
 
-  // Total binary as array
-  // Add zeros if needed
-  resultAsBinary = checkOverflow(resultAsBinary, bitSize);
-  resultAsBinary = addZeros(resultAsBinary, bitSize);
+  // Display the result
+  const result = checkOverflow(resultAsBinary, bitSize);
 
   return (
     <section className="section-calc">
       <p>{num1}</p>
       <p>{num2}</p>
       <hr />
-      <p>{resultAsBinary}</p>
+      <p>{result}</p>
     </section>
   );
 }
