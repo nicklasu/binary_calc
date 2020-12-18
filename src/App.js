@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Input from "./Components/Input/Input";
 import Result from "./Components/Result/Result";
-import CalcSteps from "./Components/CalcSteps/CalcSteps";
+import Unsigned from "./Components/Unsigned/Unsigned";
 import getNumber from "./Functions/GetNumber";
 function App() {
   const [num1, setNum1] = useState(0);
@@ -22,8 +22,8 @@ function App() {
       <button onClick={() => setCalc("+")}>+</button>
       <Result num1={getNumber(num1)} num2={getNumber(num2)} calc={calc} />
       {
-        // Show CalcSteps after user has submitted in both fields
-        num1 && num2 ? <CalcSteps num1={num1} num2={num2} calc={calc} /> : null
+        // Show Unsigned after user has submitted in both fields
+        num1 && num2 ? <Unsigned num1={num1} num2={num2} calc={calc} /> : null
       }
     </main>
   );
