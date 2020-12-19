@@ -5,7 +5,7 @@ import Result from "./Components/Result/Result";
 import Unsigned from "./Components/Unsigned/Unsigned";
 import getNumber from "./Functions/GetNumber";
 import Header from "./Components/Header/Header";
-import UnsignedOr from "./Functions/UnsignedOr";
+import UnsignedOr from "./Components/UnSignedOr/UnsignedOr";
 function App() {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);

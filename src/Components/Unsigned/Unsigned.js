@@ -9,6 +9,7 @@ function Unsigned({ num1, num2, calc }) {
   // Set max bit size
   // Add zeros if needed
   // Display result as binary
+
   const bitSize = Math.max(num1.length, num2.length);
   num1 = addZeros(num1, bitSize);
   num2 = addZeros(num2, bitSize);
@@ -30,5 +31,4 @@ function Unsigned({ num1, num2, calc }) {
     </section>
   );
 }
-
 export default Unsigned;
