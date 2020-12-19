@@ -19,7 +19,7 @@ function App() {
 
   return (
     <main className="main-content">
-      <Header />
+      <Header sign={sign} />
       <Input setNumber={setNum1} />
       <Input setNumber={setNum2} /> <br />
       <button onClick={() => setCalc("-")}>-</button>
@@ -30,7 +30,9 @@ function App() {
       <UnsignedOr sign={sign} />
       {
         // Show Unsigned after user has submitted in both fields
-        num1 && num2 ? <Unsigned num1={num1} num2={num2} calc={calc} /> : null
+        num1 && num2 ? (
+          <Unsigned num1={num1} num2={num2} calc={calc} sign={sign} />
+        ) : null
       }
     </main>
   );
