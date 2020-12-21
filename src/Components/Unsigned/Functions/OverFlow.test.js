@@ -1,28 +1,20 @@
 import checkOverflow from "./UnsignedOverflow";
 
-// Kopioi tästä vaan ja lisäile omia juttuja
-// Ei oo paha
-
-// Käynnistä testit npm run test
-describe("Result", () => {
-  test("Show overflow if it exceeds bit size", () => {
-    expect(checkOverflow("11111", 4)).toBe("overflow!");
-  });
-});
-
-describe("Binary", () => {
+// Show results
+describe("Display result as binary on Unsigned component", () => {
   test("Show binary if not overflowing", () => {
     expect(checkOverflow("1111", 4)).toBe("1111");
   });
-});
-
-describe("Binary with added zeros", () => {
-  test("Show binary if not overflowing", () => {
-    expect(checkOverflow("1111", 5)).toBe("01111");
+  test("Show binary with added zeros", () => {
+    expect(checkOverflow("01", 4)).toBe("0001");
   });
 });
 
-describe("Overflow on negative binary", () => {
+// Check overflow
+describe("Display message: overflow!", () => {
+  test("Show overflow if it exceeds bit size", () => {
+    expect(checkOverflow("11111", 4)).toBe("overflow!");
+  });
   test("Show overflow if binary is negative", () => {
     expect(checkOverflow("-1", 4)).toBe("overflow!");
   });
