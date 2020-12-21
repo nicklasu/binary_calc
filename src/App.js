@@ -12,11 +12,6 @@ function App() {
   const [calc, setCalc] = useState("+");
   const [sign, setSign] = useState("unsigned");
 
-  // TODO:
-  // Vois jotenkin tyylitellä kevyesti tätä sivustoa
-  // Kissakuvia ja mageita videoita
-  // Muista golden ratio
-
   return (
     <main className="main-content">
       <Header sign={sign} />
@@ -31,7 +26,14 @@ function App() {
       {
         // Show Unsigned after user has submitted in both fields
         num1 && num2 ? (
-          <Unsigned num1={num1} num2={num2} calc={calc} sign={sign} />
+          <Unsigned
+            setNum1={setNum1}
+            setNum2={setNum2}
+            num1={num1}
+            num2={num2}
+            calc={calc}
+            sign={sign}
+          />
         ) : null
       }
     </main>
