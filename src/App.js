@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import Input from "./Components/Input/Input";
 import Result from "./Components/Result/Result";
-import Unsigned from "./Components/Unsigned/Unsigned";
 import getNumber from "./Functions/GetNumber";
 import Header from "./Components/Header/Header";
 import UnsignedOr from "./Components/UnSignedOr/UnsignedOr";
@@ -21,12 +20,11 @@ function App() {
       <button onClick={() => setCalc("+")}>+</button> <br />
       <button onClick={() => setSign("signed")}>signed</button>
       <button onClick={() => setSign("unsigned")}>unsgnd</button>
-      <Result num1={getNumber(num1)} num2={getNumber(num2)} />
-      <UnsignedOr sign={sign} />
+      <Result num1={getNumber(num1)} num2={getNumber(num2)} calc={calc} />
       {
-        // Show Unsigned after user has submitted in both fields
+        // Show Unsigned or signed after user has submitted in both fields
         num1 && num2 ? (
-          <Unsigned
+          <UnsignedOr
             setNum1={setNum1}
             setNum2={setNum2}
             num1={num1}

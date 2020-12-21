@@ -1,15 +1,27 @@
-function UnsignedOr({ sign }) {
+import Signed from "../../Components/Signed/Signed.js";
+import Unsigned from "../../Components/Unsigned/Unsigned.js";
+function UnsignedOr({ num1, num2, setNum1, setNum2, calc, sign }) {
   if (sign === "unsigned") {
     return (
-      <section>
-        <h1>unsigned</h1>
-      </section>
+      <Unsigned
+        setNum1={setNum1}
+        setNum2={setNum2}
+        num1={num1}
+        num2={num2}
+        calc={calc}
+        sign={sign}
+      />
     );
   } else if (sign === "signed") {
     return (
-      <section>
-        <h1>signed</h1>
-      </section>
+      <Signed
+        setNum1={setNum1}
+        setNum2={setNum2}
+        num1={num1}
+        num2={num2}
+        calc={calc}
+        sign={sign}
+      />
     );
   }
 }
