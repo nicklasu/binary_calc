@@ -22,7 +22,7 @@ import { useEffect } from "react";
 // Siihen kohdistuu mahdollisimman vähän sivuvaikutuksia
 
 // Display unsigned char calculation
-function Unsigned({ num1, num2, setNum1, setNum2, calc, sign }) {
+function Unsigned({ num1, num2, setNum1, setNum2, calc }) {
   // Set max bit size from user input
   const bitSize = Math.max(num1.length, num2.length);
 
@@ -31,34 +31,24 @@ function Unsigned({ num1, num2, setNum1, setNum2, calc, sign }) {
     setNum1(addZeros(num1, bitSize));
     setNum2(addZeros(num2, bitSize));
   });
-  if (sign === "unsigned") {
-    // Display result as binary
-    let resultAsBinary = calculate(
-      getNumber(num1),
-      getNumber(num2),
-      calc
-    ).toString(2);
 
-    // Display the result
-    const result = checkOverflow(resultAsBinary, bitSize);
+  // Display result as binary
+  let resultAsBinary = calculate(
+    getNumber(num1),
+    getNumber(num2),
+    calc
+  ).toString(2);
 
-    return (
-      <section className="section-calc">
-        <p>{num1}</p>
-        <p>{num2}</p>
-        <hr />
-        <p>{result}</p>
-      </section>
-    );
-  } else if (sign === "signed") {
-    return (
-      <section className="section-calc">
-        <p>Feature</p>
-        <p>Not</p>
+  // Display the result
+  const result = checkOverflow(resultAsBinary, bitSize);
 
-        <p>Developed</p>
-      </section>
-    );
-  }
+  return (
+    <section className="section-calc">
+      <p>{num1}</p>
+      <p>{num2}</p>
+      <hr />
+      <p>{result}</p>
+    </section>
+  );
 }
 export default Unsigned;
