@@ -1,6 +1,5 @@
-import "../../Components/Unsigned/style.css";
-
-function Signed({ num1, num2, setNum1, setNum2, calc }) {
+// Signed
+function Signed() {
   return (
     <section className="section-calc">
       <p>Feature</p>

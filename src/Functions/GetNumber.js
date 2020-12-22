@@ -8,6 +8,6 @@
  */
 function getNumber(binary) {
   const number = parseInt(binary, 2);
-  return number ? number : 0;
+  return number || 0;
 }
 export default getNumber;
