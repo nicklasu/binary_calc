@@ -6,7 +6,7 @@
  * @returns {Array}
  */
 function binaryToArray(binary) {
-  return binary.split("");
+  return binary.split('');
 }
 
 export default binaryToArray;

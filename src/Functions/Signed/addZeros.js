@@ -9,9 +9,9 @@
 function addZerosSigned(array, bitSize) {
   // Check if adding zeros is needed
   if (array.length < bitSize) {
-    let zerosNeeded = bitSize - array.length;
-    for (let i = 0; i < zerosNeeded; i++) {
-      array.unshift("0");
+    const zerosNeeded = bitSize - array.length;
+    for (let i = 0; i < zerosNeeded; i += 1) {
+      array.unshift('0');
     }
   }
   return array;

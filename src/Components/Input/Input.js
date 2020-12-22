@@ -7,8 +7,8 @@ function Input({ setNumber }) {
       pattern="[0-1]*"
       placeholder={0}
       onChange={(e) => setNumber(e.currentTarget.value)}
-      style={{ textAlign: "center" }}
-    ></input>
+      style={{ textAlign: 'center' }}
+    />
   );
 }
 

@@ -1,9 +1,9 @@
-import "./style.css";
-import getNumber from "../../Functions/GetNumber";
-import calculate from "../../Functions/Calculate";
-import addZeros from "./Functions/addZeros";
-import checkOverflow from "./Functions/UnsignedOverflow";
-import { useEffect } from "react";
+import './style.css';
+import { useEffect } from 'react';
+import getNumber from '../../Functions/GetNumber';
+import calculate from '../../Functions/Calculate';
+import addZeros from './Functions/addZeros';
+import checkOverflow from './Functions/UnsignedOverflow';
 
 // TODO:
 // Niin ku tän komponentin nimi kertoo, se näyttää vaan Unsigned version
@@ -22,7 +22,9 @@ import { useEffect } from "react";
 // Siihen kohdistuu mahdollisimman vähän sivuvaikutuksia
 
 // Display unsigned char calculation
-function Unsigned({ num1, num2, setNum1, setNum2, calc }) {
+function Unsigned({
+  num1, num2, setNum1, setNum2, calc,
+}) {
   // Set max bit size from user input
   const bitSize = Math.max(num1.length, num2.length);
 
@@ -33,10 +35,10 @@ function Unsigned({ num1, num2, setNum1, setNum2, calc }) {
   });
 
   // Display result as binary
-  let resultAsBinary = calculate(
+  const resultAsBinary = calculate(
     getNumber(num1),
     getNumber(num2),
-    calc
+    calc,
   ).toString(2);
 
   // Display the result
