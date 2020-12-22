@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Input from "./Components/Input/Input";
+import Button from "./Components/Button/Button";
 import Result from "./Components/Result/Result";
 import getNumber from "./Functions/GetNumber";
 import Header from "./Components/Header/Header";
@@ -16,10 +17,10 @@ function App() {
       <Header sign={sign} />
       <Input setNumber={setNum1} />
       <Input setNumber={setNum2} /> <br />
-      <button onClick={() => setCalc("-")}>-</button>
-      <button onClick={() => setCalc("+")}>+</button> <br />
-      <button onClick={() => setSign("signed")}>signed</button>
-      <button onClick={() => setSign("unsigned")}>unsgnd</button>
+      <Button text="-" setValue={setCalc} />
+      <Button text="+" setValue={setCalc} /> <br />
+      <Button text="signed" setValue={setSign} />
+      <Button text="unsigned" setValue={setSign} />
       <Result num1={getNumber(num1)} num2={getNumber(num2)} calc={calc} />
       {
         // Show Unsigned or signed after user has submitted in both fields
