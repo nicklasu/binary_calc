@@ -46,7 +46,7 @@ function Unsigned({
 
   return (
     <section className="section-calc">
-      <p>{addStar(num1, num2, bitSize).toString()}</p>
+      <p className="stars">{addStar(num1, num2, bitSize).toString()}</p>
       <p>{num1}</p>
       <p>{num2}</p>
       <hr />
