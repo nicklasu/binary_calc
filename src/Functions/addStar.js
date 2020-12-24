@@ -10,16 +10,16 @@ function addStar(num1, num2, bitSize) {
   const bin2 = binaryToArray(num2);
 
   function carryToNext(numb1, numb2, numb3) {
-    return (Number(numb1) + Number(numb2) + numb3) >= 2;
+    return (Number(numb1) + Number(numb2) + numb3) > 1;
   }
   let carry = 0;
   for (let i = 0; bitSize > i; i += 1) {
     if (carryToNext(bin1[i], bin2[i], carry)) {
       starArr[i] = '*';
-      carry += 1;
+      carry = 1;
     } else {
       starArr[i] = ' ';
-      carry += 0;
+      carry = 0;
     }
   }
   console.log(starArr);
