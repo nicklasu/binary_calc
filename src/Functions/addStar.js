@@ -1,15 +1,19 @@
 import binaryToArray from './Signed/BinaryToArray';
 
 function addStar(num1, num2, bitSize) {
-  const starArr = new Array(bitSize).reverse();
-  const bin1 = binaryToArray(num1).reverse();
-  const bin2 = binaryToArray(num2).reverse();
+  // Doesn't work for subtraction.
+  // Se jättää ton ekan tyhjäksi, sen takia ne tähdet menee vääriin paikkoihin.
+  // Jos ottaa sen miinuksen pois bitSizestä se ei jätä ekaa arraytä tyhjäksi,
+  // mutta esim 0110 + 0110 johtaa kolmeen *** vaikka pitäisi tulla vain kaksi.
+  const starArr = new Array(bitSize);
+  const bin1 = binaryToArray(num1);
+  const bin2 = binaryToArray(num2);
 
   function carryToNext(numb1, numb2, numb3) {
-    return (Number(numb1) + Number(numb2) + numb3) > 1;
+    return (Number(numb1) + Number(numb2) + numb3) >= 2;
   }
   let carry = 0;
-  for (let i = 0; (bitSize - 1) > i; i += 1) {
+  for (let i = 0; bitSize > i; i += 1) {
     if (carryToNext(bin1[i], bin2[i], carry)) {
       starArr[i] = '*';
       carry += 1;
@@ -18,8 +22,9 @@ function addStar(num1, num2, bitSize) {
       carry += 0;
     }
   }
-
-  return starArr.join('');
+  console.log(starArr);
+  console.log(bin1);
+  return starArr.join('').toString();
 }
 
 export default addStar;
