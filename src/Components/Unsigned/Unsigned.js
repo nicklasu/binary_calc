@@ -5,9 +5,6 @@ import calculate from '../../Functions/Calculate';
 import addZeros from './Functions/addZeros';
 import checkOverflow from './Functions/UnsignedOverflow';
 
-const carryToNext = (num1, num2, num3) => Number(num1) + Number(num2) + num3 > 1;
-console.log(carryToNext('1', '1', 0));
-
 // TODO:
 // Niin ku tän komponentin nimi kertoo, se näyttää vaan Unsigned version
 // Tän komponentin sisälle ei muuta kamaa, eli tän komponentin
