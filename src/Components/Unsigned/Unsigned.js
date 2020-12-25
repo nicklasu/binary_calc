@@ -4,22 +4,7 @@ import getNumber from '../../Functions/GetNumber';
 import calculate from '../../Functions/Calculate';
 import addZeros from './Functions/addZeros';
 import checkOverflow from './Functions/UnsignedOverflow';
-
-// TODO:
-// Niin ku tän komponentin nimi kertoo, se näyttää vaan Unsigned version
-// Tän komponentin sisälle ei muuta kamaa, eli tän komponentin
-// Tehtävä on tietää vaan niistä asioista mitä sen nimi kertoo
-
-// Jos tämän ja Signed komponentin välillä vaihdellaan näkymää
-// Niin tehdään se tuolla UnSignedOr komponentissa
-// Eli UnSignedOr pitäisi sisällään 2 komponenttia (Signed, UnSigned)
-// UnSignedOrn sisälle se logiikka mikä vaihtaa näkymää niiden kahden komponentin välillä
-// if (sign === "unsigned") niin näytä Unsigned komponentti
-// Vähän samalla idealla kuin mitä oot tehnyt tonne Header komponenttiin
-
-// Reactissa on hyvä pitää komponentit mahdollisimman pieninä, ainakin tän tason ohjelmassa
-// Helpompi testata niitä ja tehdä muutoksia, kun komponentissa on mahdollisimman vähän koodia tai
-// Siihen kohdistuu mahdollisimman vähän sivuvaikutuksia
+import addStar from '../../Functions/addStar';
 
 // Display unsigned char calculation
 function Unsigned({
@@ -45,12 +30,13 @@ function Unsigned({
   const result = checkOverflow(resultAsBinary, bitSize);
 
   return (
-    <>
+    <section className="section-calc">
+      <p className="stars">{addStar(num1, num2, bitSize)}</p>
       <p>{num1}</p>
       <p>{num2}</p>
       <hr />
       <p>{result}</p>
-    </>
+    </section>
   );
 }
 export default Unsigned;
