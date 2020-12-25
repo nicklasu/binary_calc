@@ -5,24 +5,29 @@ import Unsigned from '../Unsigned/Unsigned';
 function UnsignedOr({
   num1, num2, setNum1, setNum2, calc, sign,
 }) {
-  return sign === 'unsigned' ? (
-    <Unsigned
-      setNum1={setNum1}
-      setNum2={setNum2}
-      num1={num1}
-      num2={num2}
-      calc={calc}
-      sign={sign}
-    />
-  ) : (
-    <Signed
-      setNum1={setNum1}
-      setNum2={setNum2}
-      num1={num1}
-      num2={num2}
-      calc={calc}
-      sign={sign}
-    />
+  return (
+    <section className="section-calc">
+      {sign === 'unsigned'
+        ? (
+          <Unsigned
+            setNum1={setNum1}
+            setNum2={setNum2}
+            num1={num1}
+            num2={num2}
+            calc={calc}
+            sign={sign}
+          />
+        ) : (
+          <Signed
+            setNum1={setNum1}
+            setNum2={setNum2}
+            num1={num1}
+            num2={num2}
+            calc={calc}
+            sign={sign}
+          />
+        )}
+    </section>
   );
 }
 
