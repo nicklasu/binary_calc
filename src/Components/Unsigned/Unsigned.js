@@ -4,7 +4,7 @@ import getNumber from '../../Functions/GetNumber';
 import calculate from '../../Functions/Calculate';
 import addZeros from './Functions/addZeros';
 import checkOverflow from './Functions/UnsignedOverflow';
-
+import addStar from '../../Functions/addStar';
 // TODO:
 // Niin ku tän komponentin nimi kertoo, se näyttää vaan Unsigned version
 // Tän komponentin sisälle ei muuta kamaa, eli tän komponentin
@@ -46,6 +46,7 @@ function Unsigned({
 
   return (
     <section className="section-calc">
+      <p className="stars">{addStar(num1, num2, bitSize)}</p>
       <p>{num1}</p>
       <p>{num2}</p>
       <hr />
