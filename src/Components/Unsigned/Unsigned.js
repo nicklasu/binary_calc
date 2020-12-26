@@ -4,7 +4,7 @@ import getNumber from '../../Functions/GetNumber';
 import calculate from '../../Functions/Calculate';
 import addZeros from './Functions/addZeros';
 import checkOverflow from './Functions/UnsignedOverflow';
-import addStar from '../../Functions/addStar';
+import carriedNumbers from '../../Functions/carriedNumbers';
 
 // Display unsigned char calculation
 function Unsigned({
@@ -29,11 +29,19 @@ function Unsigned({
   // Display the result
   const result = checkOverflow(resultAsBinary, bitSize);
 
+  // Display carried numbers as stars
+  const carried = calc === '+'
+    ? carriedNumbers(num1, num2)
+    : carriedNumbers('0', '0'); // <-- Placeholder
+
   return (
     <section className="section-calc">
-      <p className="stars">{addStar(num1, num2, bitSize)}</p>
+      <p className="unsigned-carried-numbers">{carried}</p>
       <p>{num1}</p>
-      <p>{num2}</p>
+      <p>
+        <span className="unsigned-calc">{calc}</span>
+        {num2}
+      </p>
       <hr />
       <p>{result}</p>
     </section>
