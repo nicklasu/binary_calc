@@ -10,6 +10,9 @@
   font-size: 2em;
   font-family: monospace;
 }
-.stars {
+.unsigned-carried-numbers {
   line-height: 1px;
+}
+.unsigned-calc {
+  margin-left: -1rem;
 }
