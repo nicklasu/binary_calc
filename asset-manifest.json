@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/binary_calc/static/css/main.c1aefa67.chunk.css",
-    "main.js": "/binary_calc/static/js/main.440a5dd3.chunk.js",
-    "main.js.map": "/binary_calc/static/js/main.440a5dd3.chunk.js.map",
+    "main.css": "/binary_calc/static/css/main.0ae4b418.chunk.css",
+    "main.js": "/binary_calc/static/js/main.2e00dc84.chunk.js",
+    "main.js.map": "/binary_calc/static/js/main.2e00dc84.chunk.js.map",
     "runtime-main.js": "/binary_calc/static/js/runtime-main.63ac6399.js",
     "runtime-main.js.map": "/binary_calc/static/js/runtime-main.63ac6399.js.map",
-    "static/js/2.92288f3b.chunk.js": "/binary_calc/static/js/2.92288f3b.chunk.js",
-    "static/js/2.92288f3b.chunk.js.map": "/binary_calc/static/js/2.92288f3b.chunk.js.map",
+    "static/js/2.25a15cb6.chunk.js": "/binary_calc/static/js/2.25a15cb6.chunk.js",
+    "static/js/2.25a15cb6.chunk.js.map": "/binary_calc/static/js/2.25a15cb6.chunk.js.map",
     "static/js/3.897bd99e.chunk.js": "/binary_calc/static/js/3.897bd99e.chunk.js",
     "static/js/3.897bd99e.chunk.js.map": "/binary_calc/static/js/3.897bd99e.chunk.js.map",
     "index.html": "/binary_calc/index.html",
-    "static/css/main.c1aefa67.chunk.css.map": "/binary_calc/static/css/main.c1aefa67.chunk.css.map",
-    "static/js/2.92288f3b.chunk.js.LICENSE.txt": "/binary_calc/static/js/2.92288f3b.chunk.js.LICENSE.txt"
+    "static/css/main.0ae4b418.chunk.css.map": "/binary_calc/static/css/main.0ae4b418.chunk.css.map",
+    "static/js/2.25a15cb6.chunk.js.LICENSE.txt": "/binary_calc/static/js/2.25a15cb6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.63ac6399.js",
-    "static/js/2.92288f3b.chunk.js",
-    "static/css/main.c1aefa67.chunk.css",
-    "static/js/main.440a5dd3.chunk.js"
+    "static/js/2.25a15cb6.chunk.js",
+    "static/css/main.0ae4b418.chunk.css",
+    "static/js/main.2e00dc84.chunk.js"
   ]
 }
