@@ -6,7 +6,7 @@ function UnsignedOr({
   num1, num2, setNum1, setNum2, calc, sign,
 }) {
   return (
-    <section className="section-calc">
+    <>
       {sign === 'unsigned'
         ? (
           <Unsigned
@@ -17,7 +17,8 @@ function UnsignedOr({
             calc={calc}
             sign={sign}
           />
-        ) : (
+        )
+        : (
           <Signed
             setNum1={setNum1}
             setNum2={setNum2}
@@ -27,7 +28,7 @@ function UnsignedOr({
             sign={sign}
           />
         )}
-    </section>
+    </>
   );
 }
 
