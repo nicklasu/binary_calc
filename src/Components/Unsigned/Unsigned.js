@@ -4,7 +4,8 @@ import getNumber from '../../Functions/GetNumber';
 import calculate from '../../Functions/Calculate';
 import addZeros from './Functions/addZeros';
 import checkOverflow from './Functions/UnsignedOverflow';
-import carriedNumbers from '../../Functions/carriedNumbers';
+import carriedNumbersAdd from '../../Functions/carriedNumbersAdd';
+import carriedNumbersSubtract from '../../Functions/carriedNumbersSubtract';
 
 // Display unsigned char calculation
 function Unsigned({
@@ -31,8 +32,8 @@ function Unsigned({
 
   // Display carried numbers as stars
   const carried = calc === '+'
-    ? carriedNumbers(num1, num2)
-    : carriedNumbers('0', '0'); // <-- Placeholder
+    ? carriedNumbersAdd(num1, num2)
+    : carriedNumbersSubtract(num1, num2);
 
   return (
     <section className="section-calc">
