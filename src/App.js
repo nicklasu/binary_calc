@@ -8,22 +8,22 @@ import Header from './Components/Header/Header';
 import UnsignedOr from './Components/UnSignedOr/UnsignedOr';
 
 function App() {
-  const [num1, setNum1] = useState(0);
-  const [num2, setNum2] = useState(0);
+  const [num1, setNum1] = useState('0');
+  const [num2, setNum2] = useState('0');
   const [calc, setCalc] = useState('+');
   const [sign, setSign] = useState('unsigned');
 
   return (
     <main className="main-content">
       <Header sign={sign} />
-      <Input setNumber={setNum1} />
-      <Input setNumber={setNum2} />
+      <Input setNumber={setNum1} name="num1" />
+      <Input setNumber={setNum2} name="num2" />
       <br />
-      <Button text="-" setValue={setCalc} />
       <Button text="+" setValue={setCalc} />
+      <Button text="-" setValue={setCalc} />
       <br />
-      <Button text="signed" setValue={setSign} />
       <Button text="unsigned" setValue={setSign} />
+      <Button text="signed" setValue={setSign} />
       <Result
         num1={getNumber(num1)}
         num2={getNumber(num2)}
@@ -41,7 +41,8 @@ function App() {
               calc={calc}
               sign={sign}
             />
-          ) : null
+          )
+          : null
       }
     </main>
   );
