@@ -5,20 +5,16 @@ import binaryToArray from './Signed/BinaryToArray';
  * @returns {String} - Displays borrowed numbers as stars
  * @example ('1000', '0001') => '*** '
  */
+
+// Add star if number was borrowed
+// Add empty space if not
 function carriedNumbersSubtract(num1, num2) {
-  // Split binaries as numbers to array
   const bin1 = binaryToArray(num1).map(Number);
   const bin2 = binaryToArray(num2).map(Number);
   const carriedNumbersArray = [];
   const bitSize = Math.max(num1.length, num2.length) - 1;
-
-  // Check if number was borrowed
-  // true === 1 (borrowed)
-  // false === 0 (not borrowed)
   let carry = false;
 
-  // Add star if number was borrowed
-  // Add empty space if not
   for (let i = bitSize; i >= 0; i -= 1) {
     carriedNumbersArray[i] = carry
       ? '*'
