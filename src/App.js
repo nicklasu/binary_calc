@@ -6,6 +6,7 @@ import Result from './Components/Result/Result';
 import getNumber from './Functions/GetNumber';
 import Header from './Components/Header/Header';
 import UnsignedOr from './Components/UnSignedOr/UnsignedOr';
+import signedFlip from './Functions/Signed/signedFlip';
 
 function App() {
   const [num1, setNum1] = useState('0');
@@ -24,9 +25,14 @@ function App() {
       <br />
       <Button text="unsigned" setValue={setSign} />
       <Button text="signed" setValue={setSign} />
+
       <Result
-        num1={getNumber(num1)}
-        num2={getNumber(num2)}
+        num1={sign === 'signed'
+          ? signedFlip(num1)
+          : getNumber(num1)}
+        num2={sign === 'signed'
+          ? signedFlip(num2)
+          : getNumber(num2)}
         calc={calc}
       />
       {
