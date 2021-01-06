@@ -1,0 +1,16 @@
+.result-calc {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.result-num1 {
+  color: #5163af;
+}
+
+.result-num2 {
+  color: #fbb03b;
+}
+
+.result-total {
+  color: #f15a24;
+}

@@ -1,0 +1,36 @@
+.section-calc {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 2em;
+}
+.unsigned-num1 {
+  color: #5163af;
+}
+.unsigned-num2 {
+  color: #fbb03b;
+}
+.unsigned-result {
+  color: #f15a24;
+}
+
+.section-calc p {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  font-family: monospace;
+  font-weight: 600;
+}
+.section-calc .unsigned-carried-numbers {
+  line-height: 1px;
+  font-weight: normal;
+}
+.unsigned-calc {
+  margin-left: -1rem;
+  color: black;
+  font-weight: normal;
+}
+
+.unsigned-stars {
+  font-family: monospace;
+  font-size: 0.8rem;
+}

@@ -1,21 +1,30 @@
+import { useState } from 'react';
+import './App.css';
+import Header from './Components/Header/Header';
+import UnsignedComponent from './Components/UnsignedComponent/UnsignedComponent';
+import SignedComponent from './Components/SignedComponent/SignedComponent';
+import Button from './Components/Button/Button';
+
 function App() {
+  const [sign, setSign] = useState('unsigned');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main-content">
+      <Header sign={sign} />
+      <Button text="unsgnd" setValue={setSign} />
+      <Button text="signed" setValue={setSign} />
+
+      {
+      // Signed pressed, show signed component. Otherwise show unsigned component
+      sign === 'signed'
+        ? (
+          <SignedComponent />
+        )
+        : (
+          <UnsignedComponent />
+        )
+}
+    </main>
   );
 }
 
