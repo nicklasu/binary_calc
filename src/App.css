@@ -12,3 +12,7 @@ body {
   padding: 1vh;
   margin: 1vh;
 }
+Button {
+  font-family: monospace;
+  color: black;
+}
